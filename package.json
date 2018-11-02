@@ -1,0 +1,22 @@
+{
+  "name": "mycare",
+  "version": "0.0.1",
+  "description": "care platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-z-ivanov/mycare.git"
+  },
+  "keywords": [
+    "care"
+  ],
+  "author": "Alexander Ivanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-z-ivanov/mycare/issues"
+  },
+  "homepage": "https://github.com/a-z-ivanov/mycare#readme"
+}
