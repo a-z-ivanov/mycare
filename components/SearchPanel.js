@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import FilterList from './FilterList';
 import experienceFilters from './ExperienceFilters';
 import tasksFilters from './TasksFilters';
 import Select from './Select';
 import cities from './Cities';
+import { toggleIsAdvancedSearch } from '../actions/search';
 
 const SearchPanel = ({ isAdvanced, onAdvancedPress }) => <div>
 	<label>Location</label>
@@ -27,4 +29,12 @@ SearchPanel.propTypes = {
 	onAdvancedPress: PropTypes.func
 };
 
-export default SearchPanel;
+const mapStateToProps = (state) => ({
+	isAdvanced: state.search.isAdvanced
+});
+
+const mapDispatchToProps = (dispatch) => ({
+	onAdvancedPress: () => dispatch(toggleIsAdvancedSearch())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPanel);

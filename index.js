@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
 import SearchPanel from './components/SearchPanel';
 
-let isAdvanced = false;
-const onAdvancedPress = () => {
-	isAdvanced = !isAdvanced;
-	render();
-};
-const render = () => {
-	const jsx = <SearchPanel isAdvanced={isAdvanced} onAdvancedPress={onAdvancedPress}></SearchPanel>;
-	ReactDOM.render(jsx, document.getElementById('app'));
-};
+const store = configureStore();
+const jsx = <Provider store={store}>
+	<SearchPanel></SearchPanel>
+</Provider>;
 
-render();
+ReactDOM.render(jsx, document.getElementById('app'));
