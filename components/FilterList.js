@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterList = ({ filters }) => (
-	<div>
+	<div className='filterList'>
 		{filters.map(f =>
 			<div key={f.id}>
 				<input type="checkbox" id={f.id} />

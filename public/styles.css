@@ -1,0 +1,8 @@
+.filterList {
+	display: inline-block;
+	width: 30%;
+}
+
+.toggled {
+	border: 3px solid black;
+}
